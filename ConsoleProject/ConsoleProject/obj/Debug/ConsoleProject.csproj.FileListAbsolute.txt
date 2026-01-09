@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\bin\Debug\ConsoleProject.exe.config
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\bin\Debug\ConsoleProject.exe
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\bin\Debug\ConsoleProject.pdb
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.exe
+C:\Users\USER\source\repos\연습.md\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.pdb
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\obj\Debug\ConsoleProject.csproj.AssemblyReference.cache
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\obj\Debug\ConsoleProject.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\obj\Debug\ConsoleProject.exe
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\obj\Debug\ConsoleProject.pdb
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\bin\Debug\ConsoleProject.exe.config
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\bin\Debug\ConsoleProject.exe
+C:\Users\admin\Downloads\Project_ex\ConsoleProject\bin\Debug\ConsoleProject.pdb
