@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 public abstract class Item : GameObject
 {
-    public string Name { get; 
-    set; }
+    public string Name { get; set; }
     public PlayerCharacter Owner { get; set; } 
     public string Description { get; set; }
 
