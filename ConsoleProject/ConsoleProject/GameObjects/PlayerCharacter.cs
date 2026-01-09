@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 public class PlayerCharacter : GameObject
 {
-    public ObservableProperty<int> Health = new ObservableProperty<int>(5);
+    public const int MaxHealth = 5;
+    public ObservableProperty<int> Health = new ObservableProperty<int>(MaxHealth);
     public ObservableProperty<int> Mana = new ObservableProperty<int>(5);
-    private string _healthGauge;
-    private string _manaGauge;
 
+    public Tile[,] Field { get; set; } 
     public Tile[,] Field { get; set; }
     private Inventory _inventory;
     public bool IsActiveControl { get; private set; }
