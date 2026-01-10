@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
     public class Potion : Item, IInteractable
     {
-
-        public Potion() => Init();
-
+ public Potion()
+    {
+        Symbol = "♥";
+        Name = "회복 물약";
+    }
         private void Init()
         {
             Symbol = 'I';
