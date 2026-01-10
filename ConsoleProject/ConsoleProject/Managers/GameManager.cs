@@ -5,40 +5,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// 게임 전체를 관리하는 매니저 클래스
 public class GameManager
 {
-    public static bool IsGameOver { get; set; }
+    public static bool IsGameOver { get; set; }  // 게임 종료 플래그
     public const string GameName = "아무튼 RPG";
     private PlayerCharacter _player;
 
+    // 게임 메인 루프
     public void Run()
     {
         Init();
 
         while (!IsGameOver)
         {
-            // 렌더링
             Console.Clear();
-            SceneManager.Render();
-            // 키입력 받고
-            InputManager.GetUserInput();
+            SceneManager.Render();      // 화면 렌더링
+            InputManager.GetUserInput(); // 입력 처리
 
             if (InputManager.GetKey(ConsoleKey.L))
             {
                 SceneManager.Change("Log");
             }
 
-            // 데이터 처리
-            SceneManager.Update();
+            SceneManager.Update();       // 로직 업데이트
         }
     }
 
+    // 게임 초기화
     private void Init()
     {
         IsGameOver = false;
+        
         SceneManager.OnChangeScene += InputManager.ResetKey;
+        
         _player = new PlayerCharacter();
 
+        // 씬 등록
         SceneManager.AddScene("Title", new TitleScene());
         SceneManager.AddScene("Story", new StoryScene());
         SceneManager.AddScene("Town", new TownScene(_player));
