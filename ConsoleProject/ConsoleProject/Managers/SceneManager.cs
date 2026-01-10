@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 // 씬(장면) 전환 및 관리
 public static class SceneManager
-    {
+{
     public static Action OnChangeScene;              // 씬 변경 시 호출되는 이벤트
     public static Scene Current { get; private set; } // 현재 씬
     private static Scene _prev;                       // 이전 씬
 
-
-       private static Dictionary<string, Scene> _scenes = new Dictionary<string, Scene>();
+    private static Dictionary<string, Scene> _scenes = new Dictionary<string, Scene>();
 
     // 씬 등록
     public static void AddScene(string key, Scene state)
@@ -32,8 +31,9 @@ public static class SceneManager
     {
         if (!_scenes.ContainsKey(key)) return;
         Change(_scenes[key]);
+    }
 
-   
+    // 씬 변경 (핵심 로직)
     public static void Change(Scene scene)
     {
         Scene next = scene;
@@ -60,5 +60,4 @@ public static class SceneManager
     {
         Current?.Render();
     }
-
 }
