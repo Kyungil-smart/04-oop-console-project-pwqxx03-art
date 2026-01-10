@@ -13,10 +13,10 @@ using System.Threading.Tasks;
         Symbol = "♥";
         Name = "회복 물약";
     }
-        private void Init()
-        {
-            Symbol = 'I';
-        }
+    public void Interact(PlayerCharacter player)
+    {
+        player.AddItem(this);
+    }
 
         public override void Use()
         {
