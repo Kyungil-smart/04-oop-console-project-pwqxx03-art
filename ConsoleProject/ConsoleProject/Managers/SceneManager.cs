@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
+// 씬(장면) 전환 및 관리
 public static class SceneManager
 {
-    public static Action OnChangeScene;
-    public static Scene Current { get; private set; }
-    private static Scene _prev;
+    public static Action OnChangeScene;              // 씬 변경 시 호출되는 이벤트
+    public static Scene Current { get; private set; } // 현재 씬
+    private static Scene _prev;                       // 이전 씬
+
 
     private static Dictionary<string, Scene> _scenes = new Dictionary<string, Scene>();
 
