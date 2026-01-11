@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
 public class ObservableProperty<T> where T : struct
 {
     private T _value;
@@ -43,4 +40,3 @@ public class ObservableProperty<T> where T : struct
         OnValueChanged = null;
     }
 }
-

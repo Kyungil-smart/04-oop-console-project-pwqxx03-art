@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 
 public class TitleScene : Scene
 {
@@ -12,21 +10,62 @@ public class TitleScene : Scene
 
     public TitleScene()
     {
-        Init();
-    }
-
-    public void Init()
-    {
-        _titleMenu = new MenuList();
-        _titleMenu.Add("게임 시작", GameStart);
-        _titleMenu.Add("크레딧", ViewCredits);
-        _titleMenu.Add("게임 종료", GameQuit);
+        _titleMenu = new MenuList(
+            ("게임 시작", StartGame),
+            ("게임 정보", ShowCredit),
+            ("종료", ExitGame)
+        );
     }
 
     public override void Enter()
     {
-        _titleMenu.Reset();
-        Debug.Log("타이틀 씬 진입");
+    }
+
+    public override void Exit()
+    {
+    }
+
+    public override void Render()
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.Clear();
+
+        int leftMargin = 2;
+        int currentY = 2;
+
+        string[] logoLines = {
+            @"           _____ __      __ ______  _   _  _______  _    _  _____   ______ ",
+            @"     /\   |  __ \\ \    / /|  ____|| \ | ||__   __|| |  | ||  __ \ |  ____|",
+            @"    /  \  | |  | |\ \  / / | |__   |  \| |   | |   | |  | || |__) || |__   ",
+            @"   / /\ \ | |  | | \ \/ /  |  __|  | . ` |   | |   | |  | ||  _  / |  __|  ",
+            @"  / ____ \| |__| |  \  /   | |____ | |\  |   | |   | |__| || | \ \ | |____ ",
+            @" /_/    \_\_____/    \/    |______||_| \_|   |_|    \____/ |_|  \_\|______|"
+        };
+
+        Console.ForegroundColor = ConsoleColor.Green;
+
+        foreach (string line in logoLines)
+        {
+            Console.SetCursorPosition(leftMargin, currentY++);
+            Console.WriteLine(line);
+        }
+
+        currentY += 2;
+
+        Console.ForegroundColor = ConsoleColor.White;
+        string subTitle = "은진이의 ADVENTURE"; 
+        Console.SetCursorPosition(leftMargin, currentY++);
+        Console.WriteLine(subTitle);
+
+        currentY += 2;
+
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.SetCursorPosition(leftMargin, currentY++);
+        Console.WriteLine("↑↓: 이동, Enter: 선택");
+        
+        currentY += 1;
+
+        _titleMenu.Render(leftMargin, currentY);
     }
 
     public override void Update()
@@ -35,41 +74,27 @@ public class TitleScene : Scene
         {
             _titleMenu.SelectUp();
         }
-
-        if (InputManager.GetKey(ConsoleKey.DownArrow))
+        else if (InputManager.GetKey(ConsoleKey.DownArrow))
         {
             _titleMenu.SelectDown();
         }
-
-        if (InputManager.GetKey(ConsoleKey.Enter))
+        else if (InputManager.GetKey(ConsoleKey.Enter))
         {
             _titleMenu.Select();
         }
     }
 
-    public override void Render()
+    private void StartGame()
     {
-        Console.SetCursorPosition(5, 1);
-        GameManager.GameName.Print(ConsoleColor.Yellow);
-
-        _titleMenu.Render(8, 5);
+        SceneManager.Change("Story");
     }
 
-    public override void Exit()
+    private void ShowCredit()
     {
     }
 
-    public void GameQuit()
+    private void ExitGame()
     {
         GameManager.IsGameOver = true;
-    }
-
-    public void GameStart()
-    {
-        SceneManager.Change("Town");
-    }
-
-    public void ViewCredits()
-    {
     }
 }

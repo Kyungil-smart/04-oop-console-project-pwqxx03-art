@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
 public struct Ractangle
 {
     public int X;
@@ -29,21 +26,20 @@ public struct Ractangle
         int bw = Console.BufferWidth;
         int bh = Console.BufferHeight;
 
-        // 좌표/크기가 버퍼 밖이면 그리지 않음
         if (X < 0 || Y < 0) return;
         if (X >= bw || Y >= bh) return;
         if (X + Width - 1 >= bw) return;
         if (Y + Height - 1 >= bh) return;
 
-        // 맨 윗줄
         Console.SetCursorPosition(X, Y);
         for (int i = 0; i < Width; i++)
         {
-            if (i == 0 || i == Width - 1) '*'.Print();
-            else '-'.Print();
+            if (i == 0 || i == Width - 1) 
+                '*'.Print();
+            else 
+                '-'.Print();
         }
 
-        // 중간
         for (int i = 1; i < Height - 1; i++)
         {
             Console.SetCursorPosition(X, Y + i);
@@ -59,13 +55,13 @@ public struct Ractangle
             '|'.Print();
         }
 
-        // 맨 아랫줄
         Console.SetCursorPosition(X, Y + Height - 1);
         for (int i = 0; i < Width; i++)
         {
-            if (i == 0 || i == Width - 1) '*'.Print();
-            else '-'.Print();
+            if (i == 0 || i == Width - 1) 
+                '*'.Print();
+            else 
+                '-'.Print();
         }
     }
 }
-

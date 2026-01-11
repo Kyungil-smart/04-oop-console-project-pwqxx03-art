@@ -75,12 +75,10 @@ public class MenuList
             _currentIndex--;
         }
     }
-    // ===================================
 
     public void SelectUp()
     {
         _currentIndex--;
-
         if (_currentIndex < 0)
             _currentIndex = 0;
     }
@@ -88,7 +86,6 @@ public class MenuList
     public void SelectDown()
     {
         _currentIndex++;
-
         if (_currentIndex >= _menus.Count)
             _currentIndex = _menus.Count - 1;
     }

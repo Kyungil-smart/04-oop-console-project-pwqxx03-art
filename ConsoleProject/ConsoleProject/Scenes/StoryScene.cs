@@ -18,9 +18,6 @@ public class StoryScene : Scene
         }
     }
 
-    public override void Exit()
-    {
-    }
     public override void Render()
     {
         int x = 2;
@@ -59,4 +56,40 @@ public class StoryScene : Scene
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("이다.");
 
+        y++;
+
+        Console.SetCursorPosition(x, y++);
+        Console.WriteLine("숲속 깊은 곳에 사는 대왕벌을 잡아야 한다.");
+        Console.SetCursorPosition(x, y++);
+        Console.WriteLine("무시무시한 녀석이라 아무도 돌아오지 못했다.");
+
+        y++;
+
+        Console.SetCursorPosition(x, y++);
+        Console.WriteLine("하지만 나는 가야만 한다.");
+        Console.SetCursorPosition(x, y++);
+        Console.WriteLine("동생을 살리기 위해서...");
+        
+        y++;
+        y++;
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.SetCursorPosition(x, y++);
+        Console.WriteLine("은진이의 모험이 지금 시작된다!");
+        
+        y++;
+        y++;
+        y++;
+
+        if (DateTime.Now.Second % 2 == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.SetCursorPosition(x, y++);
+            Console.WriteLine(">> Enter를 누르면 마을로 갑니다...");
+        }
+    }
+
+    public override void Exit()
+    {
+    }
 }
