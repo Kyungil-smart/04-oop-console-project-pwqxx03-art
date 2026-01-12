@@ -16,3 +16,6 @@ C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\Cons
 C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.csproj.CoreCompileInputs.cache
 C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.exe
 C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\ConsoleProject\obj\Debug\ConsoleProject.pdb
+C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\ConsoleProject\bin\Debug\ConsoleProject.exe.config
+C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\ConsoleProject\bin\Debug\ConsoleProject.exe
+C:\Users\USER\Documents\t\04-oop-console-project-pwqxx03-art\ConsoleProject\ConsoleProject\bin\Debug\ConsoleProject.pdb
